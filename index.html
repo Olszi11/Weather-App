@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather App</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body>
+  <!--header-->
+  <div id="header">
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="text-center">Weather App</h1>
+      </div>
+    </div>
+  </div>
+  <!--end header-->
+
+  <!--main page-->
+  <div id="container">
+    <div class="container">
+      <div clas="content-container">
+        <div class="row">
+          <div class="col-lg-12 main-page">
+            <h2> Welcome to my weather app</h2><br>
+            <p> Check current weather in 200 000 cities!</p>
+            <p> Check 7 day forecast weather data at any location or city!</p>
+            <p> Check historical weather data for 37 000 cities!</p>
+            <p class="pBtn"> Click button below to Start</p>
+            <button type="button" class="btn btn-success startButton center-block">Start</button>
+          </div>
+        </div>
+        <!--end main page-->
+
+
+        <!--choose page-->
+        <div class="row choose-page">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+            <div class="option1 center-block">
+              <h3>Show current weather data for any location including over 200 000 cities</h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+            <div class="option2 center-block">
+              <h3>Show 7 day forecast weather data at any location or city</h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12  text-center">
+            <div class="option3 center-block">
+              <h3>Show historical weather data for last 7 days</h3>
+            </div>
+          </div>
+        </div>
+        <!--end choose page-->
+
+        <!--option1-->
+        <div class="option1-page">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2>Enter City Name</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <span id="error"></span>
+            </div>
+          </div>
+          <div class="row form-group form-inline" id="rowDiv">
+            <div class="col-lg-12">
+              <input type="text" name="city" id="city" class="form-control" placeholder="City's English Name">
+              <button id="submitWeather" class="btn btn-primary"> Search City </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div id="show"> </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <button type="button" class="btn btn-danger returnButton center-block">Return</button>
+            </div>
+          </div>
+        </div>
+        <!--end option1-->
+
+        <!--option2-->
+        <div class="option2-page">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2> Enter City name and date</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <span id="error2"></span>
+            </div>
+          </div>
+          <div class="row form-group form-inline" id="rowDiv2">
+            <div class="col-lg-12">
+              <input type="text" name="city" id="city2" class="form-control" placeholder="City's English Name">
+              <label>Date:
+            <select id="startDay2" name="d"  />
+          </select></label>
+              <!-- <label>Hour:
+            <select id="endHour2" name="h" />
+            </select>
+          </label> -->
+            </div>
+            <div class="col-lg-12">
+              <button id="submitWeather2" class="btn btn-primary"> Search City </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div id="show2"> </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <button type="button" class="btn btn-danger returnButton center-block">Return</button>
+            </div>
+          </div>
+        </div>
+        <!--end option2-->
+
+        <!--option3-->
+        <div class="option3-page">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2> Enter City name, date and hour</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <span id="error3"></span>
+            </div>
+          </div>
+          <div class="row form-group form-inline" id="rowDiv3">
+            <div class="col-lg-12">
+              <input type="text" name="city" id="city3" class="form-control" placeholder="City's English Name">
+              <label>Date:
+            <select id="startDay3" name="d"  />
+          </select></label>
+              <label>Hour:
+            <select id="endHour3" name="h" />
+            </select>
+          </label>
+            </div>
+            <div class="col-lg-12">
+              <button id="submitWeather3" class="btn btn-primary"> Search City </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div id="show3"> </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <button type="button" class="btn btn-danger returnButton center-block">Return</button>
+            </div>
+          </div>
+        </div>
+        <!--end option3-->
+      </div>
+    </div>
+  </div>
+
+
+  <!--footer-->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <p class="text-center pull-left">Copyright 2017 &copy; Weather App</p>
+        </div>
+        <div class="col-lg-8">
+          <a href="http://openweathermap.org/" target="_blank"><img class="img1 pull-right" src="images/owm.png"/></a>
+          <a href="https://www.apixu.com/" target="_blank"><img class="img2 pull-right" src="images/apixu.png" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end footer-->
+
+</body>
+<!-- Latest compiled JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+</html>
