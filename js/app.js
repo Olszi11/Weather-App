@@ -1,29 +1,29 @@
 $(function() {
 
   /*parameters*/
-  var startButton = $(".startButton");
-  var returnButton = $(".returnButton")
-  var mainPage = $(".main-page");
-  var choosePage = $(".choose-page");
-  var option1 = $(".option1");
-  var option2 = $(".option2");
-  var option3 = $(".option3");
+  let startButton = $(".startButton");
+  let returnButton = $(".returnButton")
+  let mainPage = $(".main-page");
+  let choosePage = $(".choose-page");
+  let option1 = $(".option1");
+  let option2 = $(".option2");
+  let option3 = $(".option3");
 
-  var option1Page = $(".option1-page");
-  var headerH1 = $("#header").find('h1');
-  var button = $('#submitWeather');
-  var button2 = $('#submitWeather2');
-  var button3 = $('#submitWeather3');
-  var showIt = $('#show');
-  var showIt2 = $('#show2');
-  var showIt3 = $('#show3');
+  let option1Page = $(".option1-page");
+  let headerH1 = $("#header").find('h1');
+  let button = $('#submitWeather');
+  let button2 = $('#submitWeather2');
+  let button3 = $('#submitWeather3');
+  let showIt = $('#show');
+  let showIt2 = $('#show2');
+  let showIt3 = $('#show3');
 
-  var option2Page = $(".option2-page");
-  var option3Page = $(".option3-page");
-  var date3 = $("#startDay3").text("");
-  var hour3 = $("#endHour3").text("");
-  var date2 = $("#startDay2").text("");
-  var hour2 = $("#endHour2").text("");
+  let option2Page = $(".option2-page");
+  let option3Page = $(".option3-page");
+  let date3 = $("#startDay3").text("");
+  let hour3 = $("#endHour3").text("");
+  let date2 = $("#startDay2").text("");
+  let hour2 = $("#endHour2").text("");
   $('#city').val("");
   $('#city2').val("");
   $('#city3').val("");
@@ -76,8 +76,8 @@ $(function() {
 
     button.on("click", function() {
 
-      var city = $('#city').val();
-      var count = 0;
+      let city = $('#city').val();
+      let count = 0;
       if (city != "") {
 
         $.ajax({
@@ -85,7 +85,7 @@ $(function() {
           type: "GET",
           dataType: "json",
         }).done(function(data) {
-          var widget = show(data);
+          let widget = show(data);
 
           showIt.html(widget);
           showIt.show();
@@ -136,10 +136,10 @@ $(function() {
     headerH1.text("7 Day Forecast Weather Data");
 
 
-    var myDate = new Date();
+    let myDate = new Date();
 
     $('#startDay2').empty();
-    var x = '';
+    let x = '';
     for (i = 1; i <= 7; i++) {
       x += '<option value="' + i + '">' + new Date(myDate.getTime() + (24 * 60 * 60 * 1000) * i).toISOString().slice(0, 10) + '</option>'; // <-- store how many options
     }
@@ -155,7 +155,7 @@ $(function() {
 
     button2.on("click", function() {
 
-      var city2 = $('#city2').val();
+      let city2 = $('#city2').val();
       date2 = $("#startDay2 :selected").text();
       // hour2 = $("#endHour2").val();
 
@@ -166,7 +166,7 @@ $(function() {
           type: "GET",
           dataType: "json",
         }).done(function(data) {
-          var widget = show2(data);
+          let widget = show2(data);
 
 
           showIt2.html(widget);
@@ -221,7 +221,7 @@ $(function() {
     choosePage.css('display', "none");
     headerH1.text("Get History Weahter");
 
-    var myDate = new Date();
+    let myDate = new Date();
 
     $('#startDay3').empty();
     var x = '';
@@ -240,7 +240,7 @@ $(function() {
 
     button3.on("click", function() {
 
-      var city3 = $('#city3').val();
+      let city3 = $('#city3').val();
       date3 = $("#startDay3 :selected").text();
       hour3 = $("#endHour3").val();
 
@@ -251,7 +251,7 @@ $(function() {
           type: "GET",
           dataType: "json",
         }).done(function(data) {
-          var widget = show3(data);
+          let widget = show3(data);
 
 
           showIt3.html(widget);
